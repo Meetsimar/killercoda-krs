@@ -1,130 +1,140 @@
-# Step 1: Clone the KRS Repository
 
-First, we need to clone the KRS repository from GitHub. Run the following command:
+# Installing KRS
 
-```bash
+To install KRS, follow these steps:
+
+## Step 1. Clone the KRS Repository
+
+First, clone the KRS repository from GitHub using the following command:
+
+\`\`\`bash
 git clone https://github.com/kubetoolsca/krs.git
-```
+\`\`\`
 
-After cloning, navigate to the `krs` directory:
+Navigate to the \`krs\` directory:
 
-```bash
+\`\`\`bash
 cd krs
-```
+\`\`\`
 
-In the next steps, we will install KRS locally and explore its functionalities.
-
-# Step 2: Install KRS Locally
+## Step 2. Install KRS Locally
 
 To install KRS locally on your system, run the following command:
 
-```bash
+\`\`\`bash
 pip install .
-```
+\`\`\`
 
-Check if the tool has been successfully installed using:
+Verify if KRS is installed correctly:
 
-```bash
+\`\`\`bash
 krs --help
-```
+\`\`\`
 
-You should see the KRS help menu, indicating that KRS is installed correctly.
+## Step 3. Initialize KRS
 
-# Step 3: Initialize KRS
+Initialize KRS by running:
 
-Initialize KRS by running the following command:
-
-```bash
+\`\`\`bash
 krs init
-```
+\`\`\`
 
-You should see a message indicating that KRS has been initialized successfully.
-
-# Step 4: Scan the Clusters
+## Step 4. Scan the Clusters
 
 Scan your Kubernetes cluster with KRS:
 
-```bash
+\`\`\`bash
 krs scan
-```
+\`\`\`
 
-You should see output similar to this:
-
-```
-Scanning your cluster...
-Cluster scanned successfully...
-Extracted tools used in cluster...
-The cluster is using the following tools:
-+-------------+--------+-----------------------------+---------------+
-| Tool Name   |   Rank | Category                    | CNCF Status   |
-+=============+========+=============================+===============+
-| autoscaler  |      5 | Cluster with Core CLI tools | unlisted      |
-+-------------+--------+-----------------------------+---------------+
-```
-
-# Step 5: Get Recommended Tools
+## Step 5. Get Recommended Tools
 
 To get recommendations for tools to use in your cluster, run:
 
-```bash
+\`\`\`bash
 krs recommend
-```
+\`\`\`
 
-You should see output similar to this:
+## Step 6. Install Additional Tools
 
-```
-Our recommended tools for this deployment are:
-+-----------------------------+------------------+-------------+---------------+
-| Category                    | Recommendation   | Tool Name   | CNCF Status   |
-+=============================+==================+=============+===============+
-| Cluster with Core CLI tools | Recommended tool | k9s         | unlisted      |
-+-----------------------------+------------------+-------------+---------------+
-```
+For example, install Helm and deploy KubeView:
 
-# Step 6: Install Additional Tools
-
-For example, you can install Helm and deploy KubeView:
-
-```bash
+\`\`\`bash
 brew install helm
 helm install kubeview kubeview
-```
+\`\`\`
 
-You should see output similar to this:
-
-```
-NAME: kubeview
-LAST DEPLOYED: Sat Jun 29 21:44:17 2024
-NAMESPACE: default
-STATUS: deployed
-REVISION: 1
-NOTES:
-=====================================
-==== KubeView has been deployed! ====
-=====================================
-To get the external IP of your application, run the following:
-export SERVICE_IP=$(kubectl get svc --namespace default kubeview -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
-echo http://$SERVICE_IP
-NOTE: It may take a few minutes for the LoadBalancer IP to be available.
-You can watch the status of by running 'kubectl get --namespace default svc -w kubeview'
-```
-
-# Step 7: Export Pod Info
+## Step 7. Export Pod Info
 
 To export pod information along with logs and events, run:
 
-```bash
+\`\`\`bash
 krs export
-```
+\`\`\`
 
-You should see a message indicating that the pod info has been exported and saved as a JSON file in the current directory.
+## Step 8. Detect and Fix Issues
 
-# Step 8: Detect and Fix Issues
+Start an interactive session for health checks with:
 
-To start an interactive session for health checks, run:
-
-```bash
+\`\`\`bash
 krs health
-```
+\`\`\`
 
-Follow the prompts to choose the model provider, enter your API key, and select the namespace and pod for health checks. You will see logs and events from the selected pod, and you can troubleshoot any issues interactively.
+Follow the prompts to choose the model provider, enter your API key, and select the namespace and pod for health checks. You can troubleshoot issues interactively.
+
+## Step 9. Create a YAML File and Deploy a Pod
+
+Create a YAML file \`deploy.yaml\` with the following content:
+
+\`\`\`yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        resources:
+          limits:
+            memory: 4Gi
+\`\`\`
+
+Deploy the Pod using:
+
+\`\`\`bash
+kubectl apply -f deploy.yaml
+\`\`\`
+
+## Step 10. Run a Scan
+
+Run a scan to check for any issues:
+
+\`\`\`bash
+krs analyze
+\`\`\`
+
+## Step 11. Detailed Explanation of the Issues
+
+For a more detailed explanation of any issues found, use:
+
+\`\`\`bash
+krs analyze --explain
+\`\`\`
+
+## Step 12. Get Official Documentation
+
+You can also fetch official documentation from Kubernetes.io using:
+
+\`\`\`bash
+krs analyze --with-doc
+\`\`\`
