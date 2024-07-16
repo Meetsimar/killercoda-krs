@@ -44,17 +44,16 @@ To get recommendations for tools to use in your cluster, run:
 
 For example, install Helm and deploy KubeView:
 
-Update package list:
+Run the following script to install Helm:
 
-`sudo apt-get update`{{exec}}
-
-Install Helm:
-
-`curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -`{{exec}}
-`sudo apt-get install apt-transport-https --yes`{{exec}}
-`echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list`{{exec}}
-`sudo apt-get update`{{exec}}
-`sudo apt-get install helm`{{exec}}
+```bash
+sudo apt-get update && \
+curl https://baltocdn.com/helm/signing.asc | sudo apt-key add - && \
+sudo apt-get install apt-transport-https --yes && \
+echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list && \
+sudo apt-get update && \
+sudo apt-get install helm
+```{{exec}}
 
 Add the KubeView repository:
 
