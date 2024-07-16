@@ -7,86 +7,86 @@ To install KRS, follow these steps:
 
 First, clone the KRS repository from GitHub using the following command:
 
-\`\`\`bash
+```bash
 git clone https://github.com/kubetoolsca/krs.git
-\`\`\`
+```
 
-Navigate to the \`krs\` directory:
+Navigate to the `krs` directory:
 
-\`\`\`bash
+```bash
 cd krs
-\`\`\`
+```
 
 ## Step 2. Install KRS Locally
 
 To install KRS locally on your system, run the following command:
 
-\`\`\`bash
+```bash
 pip install .
-\`\`\`
+```
 
 Verify if KRS is installed correctly:
 
-\`\`\`bash
+```bash
 krs --help
-\`\`\`
+```
 
 ## Step 3. Initialize KRS
 
 Initialize KRS by running:
 
-\`\`\`bash
+```bash
 krs init
-\`\`\`
+```
 
 ## Step 4. Scan the Clusters
 
 Scan your Kubernetes cluster with KRS:
 
-\`\`\`bash
+```bash
 krs scan
-\`\`\`
+```
 
 ## Step 5. Get Recommended Tools
 
 To get recommendations for tools to use in your cluster, run:
 
-\`\`\`bash
+```bash
 krs recommend
-\`\`\`
+```
 
 ## Step 6. Install Additional Tools
 
 For example, install Helm and deploy KubeView:
 
-\`\`\`bash
+```bash
 brew install helm
 helm install kubeview kubeview
-\`\`\`
+```
 
 ## Step 7. Export Pod Info
 
 To export pod information along with logs and events, run:
 
-\`\`\`bash
+```bash
 krs export
-\`\`\`
+```
 
 ## Step 8. Detect and Fix Issues
 
 Start an interactive session for health checks with:
 
-\`\`\`bash
+```bash
 krs health
-\`\`\`
+```
 
 Follow the prompts to choose the model provider, enter your API key, and select the namespace and pod for health checks. You can troubleshoot issues interactively.
 
 ## Step 9. Create a YAML File and Deploy a Pod
 
-Create a YAML file \`deploy.yaml\` with the following content:
+Create a YAML file `deploy.yaml` with the following content:
 
-\`\`\`yaml
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -107,34 +107,34 @@ spec:
         resources:
           limits:
             memory: 4Gi
-\`\`\`
+```
 
 Deploy the Pod using:
 
-\`\`\`bash
+```bash
 kubectl apply -f deploy.yaml
-\`\`\`
+```
 
 ## Step 10. Run a Scan
 
 Run a scan to check for any issues:
 
-\`\`\`bash
+```bash
 krs analyze
-\`\`\`
+```
 
 ## Step 11. Detailed Explanation of the Issues
 
 For a more detailed explanation of any issues found, use:
 
-\`\`\`bash
+```bash
 krs analyze --explain
-\`\`\`
+```
 
 ## Step 12. Get Official Documentation
 
 You can also fetch official documentation from Kubernetes.io using:
 
-\`\`\`bash
+```bash
 krs analyze --with-doc
-\`\`\`
+```
