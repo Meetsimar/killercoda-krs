@@ -33,9 +33,7 @@ Initialize KRS by running:
 
 Install KServe by using the quick installation script:
 
-```bash
-curl -s "https://raw.githubusercontent.com/kserve/kserve/release-0.13/hack/quick_install.sh" | bash
-```{{exec}}
+`curl -s "https://raw.githubusercontent.com/kserve/kserve/release-0.13/hack/quick_install.sh"`{{exec}}
 
 ## Step 5. Scan the Clusters
 
