@@ -63,13 +63,19 @@ Install KubeView:
 
 `helm install kubeview kubeview/kubeview`{{exec}}
 
-## Step 7. Export Pod Info
+## Step 7. Scan the Clusters Again
+
+After installing KubeView, scan your Kubernetes cluster again with KRS:
+
+`krs scan`{{exec}}
+
+## Step 8. Export Pod Info
 
 To export pod information along with logs and events, run:
 
 `krs export`{{exec}}
 
-## Step 8. Detect and Fix Issues
+## Step 9. Detect and Fix Issues
 
 Start an interactive session for health checks with:
 
