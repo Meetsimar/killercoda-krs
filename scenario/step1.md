@@ -8,15 +8,13 @@ First, clone the KRS repository from GitHub using the following command:
 
 `git clone https://github.com/kubetoolsca/krs.git`{{exec}}
 
-Navigate to the `krs` directory:
+Navigate to the "krs" directory:
 
 `cd krs`{{exec}}
 
 ## Step 2. Install KRS Locally
 
-If you haven't installed the `python3-venv` package, run the following commands:
-
-`sudo apt update`{{exec}}
+If you haven't installed the "python3-venv" package, run the following commands:
 
 `sudo apt install python3-venv`{{exec}}
 
@@ -29,6 +27,10 @@ Create a virtual environment
 Activate the virtual environment
 
 `source myenv/bin/activate`{{exec}}
+
+Before installing KRS, install the `wheel` package:
+
+`pip install wheel`{{exec}}
 
 To install KRS locally on your system, run the following command:
 
