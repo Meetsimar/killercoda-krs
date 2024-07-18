@@ -16,13 +16,13 @@ Navigate to the "krs" directory:
 
 If you haven't installed the "python3-venv" package, run the following commands:
 
-`sudo apt install python3-venv`{{exec}}
+`sudo apt install python3-venv -y`{{exec}}
 
 To avoid conflicts with system packages, create and activate a virtual environment:
 
 Create a virtual environment
 
-`python3 -m venv myenv -y`{{exec}}
+`python3 -m venv myenv`{{exec}}
 
 Activate the virtual environment
 
