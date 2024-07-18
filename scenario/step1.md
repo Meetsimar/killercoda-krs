@@ -22,15 +22,11 @@ To avoid conflicts with system packages, create and activate a virtual environme
 
 Create a virtual environment
 
-`python3 -m venv myenv`{{exec}}
+`python3 -m venv myenv -y`{{exec}}
 
 Activate the virtual environment
 
 `source myenv/bin/activate`{{exec}}
-
-Before installing KRS, install the `wheel` package:
-
-`pip install wheel`{{exec}}
 
 To install KRS locally on your system, run the following command:
 
