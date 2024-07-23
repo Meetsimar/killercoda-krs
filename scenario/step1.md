@@ -80,8 +80,10 @@ Choose a model provider for the health check
 For OpenAI: `1`{{exec}}
 For Huggingface: `2`{{exec}}
 
+Manually enter your API key
+
 Click to the right model name which in this case is:   
 
 For OpenAI: `gpt-3.5-turbo`{{exec}}
 
-Enter your API key and select the namespace and pod for health checks. You can troubleshoot issues interactively.
+Select the namespace and pod for health checks. You can troubleshoot issues interactively.
