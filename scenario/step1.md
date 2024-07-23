@@ -16,7 +16,7 @@ Navigate to the "krs" directory:
 
 If you haven't installed the "python3-venv" package, run the following commands:
 
-`sudo apt install -y python3 python3-pip python3-venv build-essential`{{exec}}
+`sudo apt install python3-venv -y`{{exec}}
 
 To avoid conflicts with system packages, create and activate a virtual environment:
 
@@ -73,4 +73,8 @@ Start an interactive session for health checks with:
 
 `krs health`{{exec}}
 
-Follow the prompts to choose the model provider, enter your API key, and select the namespace and pod for health checks. You can troubleshoot issues interactively.
+Click to the right model name which in this case is:   
+
+`gpt-3.5-turbo`{{exec}}
+
+and then enter your API key, and select the namespace and pod for health checks. You can troubleshoot issues interactively.
