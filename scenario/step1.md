@@ -30,6 +30,8 @@ Activate the virtual environment
 
 To install KRS locally on your system, run the following command:
 
+`pip install wheel setuptools`
+
 `pip install .`{{exec}}
 
 Verify if KRS is installed correctly:
@@ -73,8 +75,13 @@ Start an interactive session for health checks with:
 
 `krs health`{{exec}}
 
+Choose a model provider for the health check
+
+For OpenAI: `1`{{exec}}
+For Huggingface: `2`{{exec}}
+
 Click to the right model name which in this case is:   
 
-`gpt-3.5-turbo`{{exec}}
+For OpenAI: `gpt-3.5-turbo`{{exec}}
 
-and then enter your API key, and select the namespace and pod for health checks. You can troubleshoot issues interactively.
+Enter your API key and select the namespace and pod for health checks. You can troubleshoot issues interactively.
