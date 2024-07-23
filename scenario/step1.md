@@ -30,7 +30,7 @@ Activate the virtual environment
 
 To install KRS locally on your system, run the following command:
 
-`pip install wheel setuptools`
+`pip install wheel setuptools`{{exec}}
 
 `pip install .`{{exec}}
 
