@@ -8,13 +8,6 @@
     "steps": [
       {
         "text": "step1.md"
-      },
-      {
-        "text": "setup.sh",
-        "exec": true
-      },
-      {
-        "text": "step2.md"
       }
     ]
   },
