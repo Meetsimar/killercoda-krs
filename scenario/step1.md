@@ -27,7 +27,7 @@ Initialize KRS by running:
 `krs init`{{exec}}
 
 
-## Step 4. Install Additional Tools (KServe)
+## Step 4. Install Additional Tools (Kubeview)
 
 Install Kubeview by using the following commands:
 
