@@ -8,11 +8,17 @@
     "steps": [
       {
         "text": "step1.md"
+      },
+      {
+        "text": "setup.sh",
+        "exec": true
+      },
+      {
+        "text": "step3.md"
       }
     ]
   },
   "backend": {
-    "imageid": "kubernetes-kubeadm-1node-4GB",
-    "startup": "setup.sh"
+    "imageid": "kubernetes-kubeadm-1node-4GB"
   }
 }
