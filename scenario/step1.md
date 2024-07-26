@@ -8,9 +8,9 @@ First, clone the KRS repository from GitHub using the following command:
 
 `git clone https://github.com/kubetoolsca/krs.git`{{exec}}
 
-Navigate to the "krs" directory & switch to a virtual environment:
+Navigate to the "krs" directory, install necessary dependencies using the script & switch to a virtual environment:
 
-`cd krs && source myenv/bin/activate`{{exec}}
+`cd krs && ../setup.sh && source myenv/bin/activate`{{exec}}
 
 ## Step 2. Install KRS Locally
 
