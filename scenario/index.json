@@ -9,14 +9,13 @@
       {
         "text": "step1.md"
       }
-    ]
-  },
-  "backend": {
-    "imageid": "kubernetes-kubeadm-1node-4GB"
-  },
-  "assets": {
+    ], "assets": {
     "host01": [
       {"file": "setup.sh", "target": "/root", "chmod": "+x"}
     ]
+  }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node-4GB"
   }
 }
