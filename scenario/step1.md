@@ -10,7 +10,7 @@ First, clone the KRS repository from GitHub using the following command:
 
 Navigate to the "krs" directory & run a setup script to install the necessary dependencies:
 
-`cd krs && ./setup.sh`{{exec}}
+`cd krs`{{exec}}
 
 ## Step 2. Install KRS Locally
 
