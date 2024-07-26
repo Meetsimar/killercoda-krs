@@ -31,7 +31,8 @@ Initialize KRS by running:
 
 Install Kubeview by using the following commands:
 
-`brew install helm`{{exec}}
+`curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`{{exec}}
+
 `helm install kubeview kubeview`{{exec}}
 
 ## Step 5. Scan the Clusters
