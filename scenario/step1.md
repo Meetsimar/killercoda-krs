@@ -35,7 +35,7 @@ Install Kubeview by using the following commands:
 
 `helm repo add kubeview https://benc-uk.github.io/kubeview/charts`{{exec}}
 
-`helm install kubeview kubeview/kubeview`{{exec}}
+`kubectl create namespace kubeview && helm install kubeview kubeview/kubeview --namespace kubeview`{{exec}}
 
 ## Step 5. Scan the Clusters
 
