@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Running setup.sh"
 
 # Check and install python3-venv if not already installed
 if ! dpkg -l | grep -q python3-venv; then
@@ -11,3 +12,5 @@ source myenv/bin/activate
 
 # Install necessary Python packages
 pip install wheel setuptools
+
+echo "setup.sh completed"
