@@ -7,7 +7,14 @@ fi
 
 # Create and activate a virtual environment
 python3 -m venv myenv
-source myenv/bin/activate
+
+# Print instructions for the user to manually activate the environment
+echo "Virtual environment created. To activate it, run:"
+echo "source myenv/bin/activate"
 
 # Install necessary Python packages
+source myenv/bin/activate
 pip install wheel setuptools
+
+# Verify the installation (optional)
+echo "Virtual environment activated and packages installed."
