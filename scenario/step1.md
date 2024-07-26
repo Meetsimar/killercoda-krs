@@ -14,6 +14,9 @@ Navigate to the "krs" directory & run a setup script to install the necessary de
 
 ## Step 2. Install KRS Locally
 
+`chmod +x setup.sh`{{exec}}
+`./setup.sh`{{exec}}
+
 `pip install .`{{exec}}
 
 Verify if KRS is installed correctly:
