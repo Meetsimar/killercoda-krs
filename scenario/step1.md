@@ -10,7 +10,12 @@ First, clone the KRS repository from GitHub using the following command:
 
 Navigate to the "krs" directory & install the necessary dependencies:
 
-`cd krs`{{exec}}
+`cd krs && \
+sudo apt install python3-venv -y && \
+python3 -m venv myenv && \
+source myenv/bin/activate && \
+pip install wheel setuptools
+`{{exec}}
 
 ## Step 2. Install KRS Locally
 
