@@ -29,9 +29,10 @@ Initialize KRS by running:
 
 ## Step 4. Install Additional Tools (KServe)
 
-Install KServe by using the quick installation script:
+Install Kubeview by using the following commands:
 
-`curl -s "https://raw.githubusercontent.com/kserve/kserve/release-0.13/hack/quick_install.sh" | bash`{{exec}}
+`brew install helm`{{exec}}
+`helm install kubeview kubeview`{{exec}}
 
 ## Step 5. Scan the Clusters
 
