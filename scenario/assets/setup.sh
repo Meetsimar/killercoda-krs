@@ -11,7 +11,3 @@ source myenv/bin/activate
 
 # Install necessary Python packages
 pip install wheel setuptools
-pip install .
-
-# Verify installation
-krs --help
