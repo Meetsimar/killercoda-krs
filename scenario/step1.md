@@ -37,6 +37,12 @@ Install Kubeview by using the following commands:
 
 `kubectl create namespace kubeview && helm install kubeview kubeview/kubeview --namespace kubeview`{{exec}}
 
+`helm repo add grafana https://grafana.github.io/helm-charts && \
+helm repo update && \
+kubectl create namespace monitoring && \
+helm install my-grafana grafana/grafana --namespace monitoring`{{exec}}
+
+
 ## Step 5. Scan the Clusters
 
 Scan your Kubernetes cluster with KRS:
