@@ -29,15 +29,19 @@ Initialize KRS by running:
 
 ## Step 4. Install Additional Tools (Kubeview, Grafana, Robusta)
 
-Install Kubeview by using the following commands:
+Install Helm by using the following commands:
 
 `curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`{{exec}}
 
-`helm repo add kubeview https://benc-uk.github.io/kubeview/charts`{{exec}}
+Install Kubeview by using the following commands:
 
-`kubectl create namespace kubeview && helm install kubeview kubeview/kubeview --namespace kubeview`{{exec}}
+`helm repo add kubeview https://benc-uk.github.io/kubeview/charts && kubectl create namespace kubeview && helm install kubeview kubeview/kubeview --namespace kubeview`{{exec}}
+
+Install Grafana by using the following commands:
 
 `helm repo add grafana https://grafana.github.io/helm-charts && helm repo update && kubectl create namespace monitoring && helm install my-grafana grafana/grafana --namespace monitoring`{{exec}}
+
+Install Robusta by using the following commands:
 
 `helm repo add robusta https://robusta-charts.storage.googleapis.com && helm repo update && helm install kubewatch robusta/kubewatch --set='rbac.create=true,slack.channel=#YOUR_CHANNEL,slack.token=xoxb-YOUR_TOKEN,resourcesToWatch.pod=true,resourcesToWatch.daemonset=true'`{{exec}}
 
