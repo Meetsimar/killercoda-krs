@@ -27,7 +27,7 @@ Initialize KRS by running:
 `krs init`{{exec}}
 
 
-## Step 4. Install Additional Tools (Kubeview)
+## Step 4. Install Additional Tools (Kubeview, Grafana, Robusta)
 
 Install Kubeview by using the following commands:
 
@@ -39,6 +39,7 @@ Install Kubeview by using the following commands:
 
 `helm repo add grafana https://grafana.github.io/helm-charts && helm repo update && kubectl create namespace monitoring && helm install my-grafana grafana/grafana --namespace monitoring`{{exec}}
 
+`helm repo add robusta https://robusta-charts.storage.googleapis.com && helm repo update && helm install kubewatch robusta/kubewatch --set='rbac.create=true,slack.channel=#YOUR_CHANNEL,slack.token=xoxb-YOUR_TOKEN,resourcesToWatch.pod=true,resourcesToWatch.daemonset=true'`{{exec}}
 
 ## Step 5. Scan the Clusters
 
